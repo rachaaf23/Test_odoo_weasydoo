@@ -1,0 +1,6 @@
+  <record id="action_partner_voyages" model="ir.actions.act_window">
+        <field name="name">Voyages de l'Utilisateur</field>
+        <field name="res_model">voyage</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+  </record>

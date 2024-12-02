@@ -1,0 +1,47 @@
+<odoo>
+    <!-- Vue en liste pour le modèle "voyage" -->
+    <record id="view_voyage_list" model="ir.ui.view">
+        <field name="name">voyage.list</field>
+        <field name="model">voyage</field>
+        <field name="arch" type="xml">
+            <tree string="Voyages">
+                <field name="name"/>
+                <field name="departure_date"/>
+                <field name="destination"/>
+                <field name="contact_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vue en formulaire pour le modèle "voyage" -->
+    <record id="view_voyage_form" model="ir.ui.view">
+        <field name="name">voyage.form</field>
+        <field name="model">voyage</field>
+        <field name="arch" type="xml">
+            <form string="Voyage">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="departure_date"/>
+                        <field name="destination"/>
+                        <field name="contact_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Vue héritée de res.partner pour intégrer les informations sur les voyages -->
+
+    <!-- Action pour ouvrir la liste des voyages -->
+    <record id="action_voyage" model="ir.actions.act_window">
+        <field name="name">Voyages</field>
+        <field name="res_model">voyage</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu pour les voyages -->
+    <menuitem id="menu_voyage_root" name="Voyages" sequence="10"/>
+    <menuitem id="menu_voyage" parent="menu_voyage_root" name="Liste des Voyages" sequence="20" action="action_voyage"/>
+
+</odoo>

@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "odoo 17 par Racha",
+      "type": "python",
+      "request": "launch",
+      "python": "C:\\Program Files\\Odoo 18.0.20241108\\python\\python.exe",
+      "program": "D:\\Test\\odoo16\\odoo17\\odoo-bin",
+      "console": "integratedTerminal",
+      "args": [
+        "-c",
+        "D:\\Conf\\odoo_h_tech.conf",
+        "--dev=all",
+        "-u",
+        "contact_travel"
+        //   "-u",
+        //   "all",
+      ]
+    },
+  ]
+}
